@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- liaison css -->
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <title>Exercice</title>
+    
+      </style>
+
+</head>
+
+<body class="elearning_body">
+
+    <header class="header_elearning">
+         <!-- logo -->
+        <a href="elearningApp.html" class="logo1">Save Time Academy
+        </a>
+        <div class="user">
+          <span class="user_img"> <img src="images/photo_profil.jpg" alt=""></span>
+          <div class="user_intro">
+              <p>Let's go</p>
+              <span class="user_name">Nour</span>
+          </div>
+         
+      </div>
+    </header>
+    <div class="wrapper">
+    <section class="wrapper_table_matieres">
+        <h1>Table des matières</h1>
+        <div class="liens_modules">
+            <a href="#" id="module">Module 1</a>
+            <a href="#" id="module">Module 2</a>
+            <a href="#" id="module">Module 3</a>
+        </div>
+    </section>
+      <div class="wrapper_elearning">
+      
+          <section class="wrapper_dashboard">
+              <h1>Mon tableau de bord</h1>
+              <div class="avancement_global">
+                  <div class="pourcentage box">
+                      <p class="number">23%</p>
+                      <p class="title_box" >Avancement global</p>
+                  </div>
+                  </a>
+                  <div class="nbr_lessons box">
+                      <p class="number">4</p>
+                      <p class="title_box" >Modules en cours</p>
+                  </div>
+              </div>
+              <div class="col_desk_presentation">
+                <div class="avancement_modules">
+                  <div class="avancement_details" id="avancement_details">
+                      <div class="donut_box">
+                          <canvas id="myChart" class="myChart"></canvas>
+                      </div>
+                          <div class="titreAndBtn">
+                            <div class="title_lesson"><p>Module 1 : Connaissance des produits</p></div>
+                            <div class="btn_go_lesson" id="module"><button type="button">Continuer</button>
+                            </div>
+                          </div>
+                  </div>
+                  <div class="avancement_details" id="avancement_details">
+                      <div class="donut_box">
+                          <canvas id="myChart_2" class="myChart"></canvas>
+                      </div>
+                        <div class="titreAndBtn">
+                          <div class="title_lesson"><p>Module 2 : Techniques de Vente</p></div>
+                          <div class="btn_go_lesson" id="module"><button type="button">Continuer</button>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="avancement_details" id="avancement_details">
+                      <div class="donut_box">
+                          <canvas id="myChart_3" class="myChart"></canvas>
+                      </div>
+                        <div class="titreAndBtn">
+                          <div class="title_lesson"><p>Module 3: Législation et Réglementation</p></div>
+                          <div class="btn_go_lesson" id="module"><button type="button">Commencer</button>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+                <div class="rdv_coach">
+                  <h1>Prends rendez-vous avec ton coach via ce lien :</h1>
+                  <a href="https://calendly.com/fellaki-ryahi/rendez-vous-de-30min-avec-votre-coach">Je prends rendez-vous</a>
+                </div>
+                <div class="calendrier_coach">
+                  <h1>Besoin d'aide ? Réserve un créneau avec ton coach :</h1>
+                  <!-- Début de widget en ligne Calendly -->
+                  <div class="calendly-inline-widget" data-url="https://calendly.com/fellaki-ryahi/rendez-vous-de-30min-avec-votre-coach?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=43b79e" style="min-width:320px;height:100%;width: 100% ; overflow: hidden;"></div>
+                  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Fin de widget en ligne Calendly -->
+                </div>
+              </div>
+      
+          </section>
+          
+          
+      </div>
+
+      
+      <div class="wrapper_module">
+        <section class="left">
+          <h1>Mon chemin</h1>
+        </section>
+        <section class="right">right</section>
+      </div>
+    </div>
+    
+      
+    <!-- chartjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+    const config = {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+        data: [9, (100-9)],
+        backgroundColor: [
+          '#43b79e',
+          '#fff',
+          
+        ],
+        borderColor: [
+          '#43b79e',
+        ],
+        borderWidth: 1,
+      
+      }]
+      },
+    //   options: {
+    //     scales: {
+    //       y: {
+    //         beginAtZero: true
+    //       }
+    //     }
+    //   }
+    };
+    const config_2 = {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+        data: [90, (100-90)],
+        backgroundColor: [
+          '#43b79e',
+          '#fff',
+          
+        ],
+        borderColor: [
+          '#43b79e',
+        ],
+        borderWidth: 1,
+        weight: 1,
+      }]
+      },
+    };
+    const config_3 = {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+        data: [0, (100-0)],
+        backgroundColor: [
+          '#43b79e',
+          '#fff',
+          
+        ],
+        borderColor: [
+          '#43b79e',
+        ],
+        borderWidth: 1,
+        weight: 1,
+      }]
+      },
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    // render init block
+    const myChart_2 = new Chart(
+      document.getElementById('myChart_2'),
+      config_2
+    );
+    // render init block
+    const myChart_3 = new Chart(
+      document.getElementById('myChart_3'),
+      config_3
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+    <!-- liaison js -->
+    <script src="scripts/elearning.js"></script>
+</body>
+</html>

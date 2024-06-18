@@ -1,0 +1,45 @@
+.wrapper_module{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: transform 0.8s ease-in-out; 
+    transform: translateX(-200%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header_elearning.module{
+        height: 60px;
+        width: 100%;
+        .user{
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start; 
+            gap: 20px;
+            .user_img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+}
+
+.left{
+    background-color: white;
+    width: 100%;
+    height: 10%;
+}
+.right{
+    // background-color: grey;
+    width: 100%;
+    height: 90%;
+    background: gray;
+}
+
+
+@media screen and (min-width: 850px){
+    .header_elearning.module{
+        margin-bottom: 0;
+    }
+
+}
